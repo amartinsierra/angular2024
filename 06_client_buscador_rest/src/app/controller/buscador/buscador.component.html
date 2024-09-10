@@ -1,0 +1,19 @@
+<div class="formulario">
+  <div>
+      <label for="">Temática </label>
+      <input type="text" [(ngModel)]="tematica"> <!-- ngModel para recoger datos de la vista al Controlador. -->
+      <br>
+      <br>
+      <input type="button" value="Buscar" (click)="buscar()">
+      <br>
+      <br>
+      <br>
+      <table border="1" *ngIf="resultados">
+        <tr><th>Url</th><th>Tematica</th><th>Descripcion</th></tr>
+        <tr *ngFor="let r of resultados">
+          <td><a href="{{r.url}}">{{r.url}}</a></td><td>{{r.tematica}}</td><td>{{r.descripcion}}</td>
+        </tr>
+      </table>
+
+  </div>
+</div>
