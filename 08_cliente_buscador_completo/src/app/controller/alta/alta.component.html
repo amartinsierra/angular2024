@@ -1,0 +1,42 @@
+<div class="container">
+  <h1>Nueva entrada</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6" style="border: solid 1px">
+
+
+        <div class="form-group">
+          <label>Url</label>
+          <input
+            type="text"
+            [(ngModel)]="resultado.url"
+            class="form-control"
+          />
+        </div>
+        <div class="form-group">
+          <label>Temática</label>
+          <input
+            type="text"
+            [(ngModel)]="resultado.tematica"
+            class="form-control"
+          />
+        </div>
+        <div class="form-group"></div>
+          <label>Descripción</label>
+          <input
+            type="text"
+            [(ngModel)]="resultado.descripcion"
+            class="form-control"
+          />
+        </div>
+        <br />
+      </div>
+    </div>
+    <br />
+    <div class="container">
+      <button (click)="alta()">Grabar item</button>
+    </div>
+    <br>
+    <b>{{mensaje}}</b>
+  </div>
+

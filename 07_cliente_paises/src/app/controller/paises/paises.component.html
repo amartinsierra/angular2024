@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>Continentes:</h1>
+  <select (change)="cargarPaises()" [(ngModel)]="continenteSel">
+    <option value="-">--seleccione continente--</option>
+    <option *ngFor="let c of continentes" value="{{c}}" >{{c}}</option>
+  </select>
+  <br><br>
+  <div *ngIf="paises&&paises.length>0">
+    <h1>Paises del continente {{continenteSel}}</h1>
+    <table border="1">
+      <tr>
+        <th>Pais</th>
+        <th>Capital</th>
+        <th>Población</th>
+        <th>Bandera</th>
+      </tr>
+      <tr *ngFor="let p of paises">
+        <td>{{p.nombre}}</td>
+        <td>{{p.capital}}</td>
+        <td>{{p.poblacion}}</td>
+        <td><img src="{{p.bandera}}" width="32" height="16"></td>
+      </tr>
+    </table>
+  </div>
+</div>
