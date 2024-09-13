@@ -3,20 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 
-import { BuscadorComponent } from './controller/buscador/buscador.component';
+import { LibreriaComponent } from './controller/libreria/libreria.component';
 import { FormsModule } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
-import { AltaComponent } from './controller/alta/alta.component';
-import { MenuComponent } from './controller/menu/menu.component';
-import { BuscarUrlComponent } from './controller/buscar-url/buscar-url.component';
 
 @NgModule({
   declarations: [
-
-    BuscadorComponent,
-      AltaComponent,
-      MenuComponent,
-      BuscarUrlComponent
+    LibreriaComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +17,6 @@ import { BuscarUrlComponent } from './controller/buscar-url/buscar-url.component
     FormsModule
   ],
   providers: [provideHttpClient()],
-  bootstrap: [MenuComponent]
+  bootstrap: [LibreriaComponent]
 })
 export class AppModule { }

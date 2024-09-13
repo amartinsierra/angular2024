@@ -9,7 +9,7 @@ import { BuscadorService } from '../../service/buscador.service';
   styleUrl: './alta.component.css'
 })
 export class AltaComponent {
-  resultado:Resultado=new Resultado("","","");
+  resultado:Resultado=new Resultado();
 
   constructor(private buscadorService:BuscadorService){
 

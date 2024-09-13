@@ -1,0 +1,19 @@
+<div class="formulario">
+  <div>
+      <label for="">URL </label>
+      <input type="text" [(ngModel)]="url"> <!-- ngModel para recoger datos de la vista al Controlador. -->
+      <br>
+      <br>
+      <input type="button" value="Buscar" (click)="buscar()">
+      <br>
+      <br>
+      <br>
+      <div *ngIf="resultado">
+        <h2>Url:{{resultado.url}}</h2>
+        <h2>Temática:{{resultado.tematica}}</h2>
+        <h2>Descripción:{{resultado.descripcion}}</h2>
+      </div>
+
+  </div>
+</div>
+
