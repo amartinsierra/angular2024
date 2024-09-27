@@ -1,0 +1,23 @@
+<div class="container">
+  <table class="table">
+    <thead>
+      <th>Destino</th>
+      <th>Hotel</th>
+      <th>Fecha</th>
+      <th>Total</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let r of reservas">
+        <td>{{r.hotel.localizacion}}</td>
+        <td>{{r.hotel.nombre}}</td>
+        <td>{{r.vuelo.fecha}}</td>
+        <td>{{r.precio}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <br />
+    <div class="container">
+      <button (click)="salir()">Salir</button>
+
+    </div>
+</div>

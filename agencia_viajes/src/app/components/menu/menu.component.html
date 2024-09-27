@@ -1,0 +1,14 @@
+<ul class="nav bg-light border">
+  <li class="nav-item">
+    <a class="nav-link active" *ngIf="enabledEnter" routerLink="/login">Entrar</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" *ngIf="enabledActions" routerLink="/reservar">Reservar</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" *ngIf="enabledActions" routerLink="/misreservas">Mis reservas</a>
+  </li>
+</ul>
+<div>
+  <router-outlet></router-outlet>
+</div>

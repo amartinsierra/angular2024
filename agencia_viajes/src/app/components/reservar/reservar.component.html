@@ -1,0 +1,51 @@
+<div class="container">
+  <h1>Realización de reservas</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6" style="border: solid 1px">
+        <div class="form-group">
+          <label>Destino:</label>
+          <select class="form-control" [(ngModel)]="destinoElegido" (change)="cargarHoteles()">
+            <option *ngFor="let d of destinos" value="{{ d }}">
+              {{ d }}
+            </option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Hotel:</label>
+          <select class="form-control" [(ngModel)]="reserva.hotel.idHotel">
+            <option *ngFor="let h of hoteles" value="{{ h.idHotel }}">
+              {{ h.nombre }}
+            </option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Personas:</label>
+          <select class="form-control" [(ngModel)]="plazasReservar" (change)="cargarVuelos()">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Vuelo:</label>
+          <select class="form-control" [(ngModel)]="reserva.vuelo.idVuelo">
+            <option *ngFor="let v of vuelos" value="{{ v.idVuelo }}">
+              {{v.company }} | {{v.fecha }}  |  {{v.precio }}
+            </option>
+          </select>
+        </div>
+        <br />
+      </div>
+    </div>
+    <br />
+    <div class="container">
+      <button (click)="reservar()">Realizar reserva</button>
+
+    </div>
+
+  </div>
+</div>
+
+
